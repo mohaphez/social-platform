@@ -19,6 +19,7 @@ class PostResource extends BaseAPIResource
     public function toArray(Request $request): array
     {
         return [
+            'id'           => $this->id,
             'title'        => $this->title,
             'slug'         => $this->slug,
             'published_at' => $this->published_at,
