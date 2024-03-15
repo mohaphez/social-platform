@@ -1,0 +1,13 @@
+{
+    "id": "Post",
+    "title": "Post Module",
+    "version": 0.1,
+    "name": "Post",
+    "alias": "post",
+    "description": "Post module by Hessam Taghvaei",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Post\\Providers\\PostServiceProvider"
+    ]
+}

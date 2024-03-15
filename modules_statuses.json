@@ -1,0 +1,12 @@
+{
+    "Core": true,
+    "Base": true,
+    "Support": true,
+    "User": true,
+    "Filament": true,
+    "Manager": true,
+    "Permission": true,
+    "Auth": true,
+    "Post": true,
+    "Comment": true
+}

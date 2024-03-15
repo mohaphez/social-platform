@@ -1,0 +1,13 @@
+{
+    "id": "Comment",
+    "title": "Comment Module",
+    "version": 0.1,
+    "name": "Comment",
+    "alias": "comment",
+    "description": "Comment module By Hessam Taghvaei",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Comment\\Providers\\CommentServiceProvider"
+    ]
+}
