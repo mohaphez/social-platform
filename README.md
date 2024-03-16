@@ -128,11 +128,47 @@ All modules have comprehensive test suites. Users can easily run the tests using
 
 # Web Services Endpoint Documentation
 
+## Authentication
+
+- **Endpoint**: `/api/v1/auth/login`
+- **Method**: POST
+- **Description**: login user with email and password
+- **Request Body**:
+  ```json
+  {
+       "email": "admin@example.com",
+       "password": "password"
+  }
+  ```
+- **Response**:
+    - **Status Code**: 200 OK
+    - **Body**:
+      ```json
+      {
+          "data": {
+              "user": {
+                "name": "Admin user",
+                "email": "admin@example.com",
+                "account_status": "free",
+                "account_type"  : "sudo"
+              },
+              "access_token": "32|sdsfjeruu834jnk34eijdwmxlkdf"
+          },
+          "message": "User Authenticate Successfully"
+      }
+      ```
+
 ## 1. Posts
    ### 1.1 Retrieve Posts
 
    - **Endpoint**: /api/v1/posts
    - **Method**: GET
+   - **Header**:
+    ```json
+    {
+       "Authorization" : "Bearer 32|sdsfjeruu834jnk34eijdwmxlkdf"
+    }
+    ```
    - **Description**: Retrieve a list of posts.
    - **Response**:
      - **Status Code**: 200 OK
@@ -158,6 +194,12 @@ All modules have comprehensive test suites. Users can easily run the tests using
 
 - **Endpoint**: `/api/v1/posts/save`
 - **Method**: POST
+- **Header**:
+    ```json
+    {
+       "Authorization" : "Bearer 32|sdsfjeruu834jnk34eijdwmxlkdf"
+    }
+    ```
 - **Description**: Create a new post.
 - **Request Body**:
   ```json
@@ -196,6 +238,12 @@ All modules have comprehensive test suites. Users can easily run the tests using
 
 - **Endpoint**: `/api/v1/comments/post/{post_id}`
 - **Method**: POST
+- **Header**:
+    ```json
+    {
+       "Authorization" : "Bearer 32|sdsfjeruu834jnk34eijdwmxlkdf"
+    }
+    ```
 - **Description**: Create a new comment on a specific post.
 - **Parameters**:
     - `post_id` (required): The ID of the post to which the comment belongs.
